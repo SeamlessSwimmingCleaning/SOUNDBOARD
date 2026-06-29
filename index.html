@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <style>
+    .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  min-width: 80px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 4px;
+  border: 1px solid plum;
+  cursor: pointer;
+  color: purple;
+  font-weight: 600;
+}
+  </style>
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundboard</title>
+
+  
+</head>
+  
+<body>
+  
+    <div class="container">
+    <div class="center">
+      <button id="WetFart" onClick="play_sound(this.id)">Wet Fart</button>
+      <button id="Toot" onClick="play_sound(this.id)">Toot</button>
+      <button id="Aura" onClick="play_sound(this.id)">Aura</button>
+ 
+    </div>
+  </div>
+  
+</body>
+  <script>  
+    function play_sound(clicked_id) {
+    var audio = new Audio(clicked_id + ".mp3");
+    audio.play();
+  }
+  </script>
+</html>
